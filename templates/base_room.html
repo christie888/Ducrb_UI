@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Daiwa Ubiquitous Computing Research Building</title>
+    <meta name="viewport" content="width=1024px, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link href="{{ url_for('.static', filename="css/base.css") }}" rel="stylesheet">
+    <script type="text/javascript" src="{{ url_for('.static', filename="js/jquery.js") }}"></script>
+    <script type="text/javascript" src="{{ url_for('.static', filename="js/ducrb-api.js") }}"></script>
+    {% block headerjs %}
+    {% endblock %}
+</head>
+
+
+<body>
+<img id="img-room" src="{{ url_for('static', filename="images/room-base-ja.png") }}" style="position: relative;"/>
+
+{% block sidebar %}
+{% endblock %}
+
+{% block room_content %}
+{% endblock %}
+
+
+{% block device_control %}
+{% endblock %}
+
+
+<footer class="footer">
+    {% block footer %}
+        Copyright (C) 2020 Koshizuka-Lab, The University of Tokyo, All Rights Reserved.
+    {% endblock %}
+</footer>
+</body>
+</html>

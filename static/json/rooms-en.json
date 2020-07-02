@@ -1,0 +1,386 @@
+{
+  "a301": {
+    "floor": 3,
+    "name": "301 Teachers' Room",
+    "sensor": [
+      "S301"
+    ],
+    "light": "G93",
+    "air": [
+      44
+    ],
+    "power": "3L-2",
+    "ucode": "00001c00000000000002000000062d95"
+  },
+  "a302": {
+    "floor": 3,
+    "name": "302 Research Center",
+    "sensor": [
+      "S303", "S302"
+    ],
+    "light": "G94",
+    "air": [
+      45,
+      46
+    ],
+    "power": "3L-3",
+    "ucode": "00001c00000000000002000000062d94"
+  },
+  "a303": {
+    "floor": 3,
+    "name": "303 Teachers' Room",
+    "sensor": [
+      "S303"
+    ],
+    "light": "G95",
+    "air": [
+      48
+    ],
+    "power": "3L-4",
+    "ucode": "00001c00000000000002000000062d93"
+  },
+  "a304": {
+    "floor": 3,
+    "name": "304 Laboratory",
+    "sensor": [
+      "S304"
+    ],
+    "light": "G96",
+    "air": [
+      49,
+      50
+    ],
+    "power": "3L-5",
+    "ucode": "00001c00000000000002000000062d92"
+  },
+  "a305": {
+    "floor": 3,
+    "name": "305 Laboratory",
+    "sensor": [
+      "S305"
+    ],
+    "light": "G97",
+    "air": [
+      51,
+      52
+    ],
+    "power": "3L-6",
+    "ucode": "00001c00000000000002000000062d91"
+  },
+  "a306": {
+    "floor": 3,
+    "name": "306 Memorial Hall",
+    "sensor": [
+      "S308"
+    ],
+    "light": "G100",
+    "air": [
+      56,
+      57
+    ],
+    "power": "3L-7",
+    "ucode": "00001c00000000000002000000062d90"
+  },
+  "a307": {
+    "floor": 3,
+    "name": "3F Elevator Hall",
+    "sensor": [
+      "S308"
+    ],
+    "light": "G92",
+    "air": [
+      53,
+      54
+    ],
+    "power": null,
+    "ucode": null
+  },
+  "a201": {
+    "floor": 2,
+    "name": "201 Teachers' Room",
+    "sensor": [
+      "S201"
+    ],
+    "light": "G86",
+    "air": [
+      34
+    ],
+    "power": "2L-2",
+    "ucode": "00001c00000000000002000000062d8e"
+  },
+  "a202": {
+    "floor": 2,
+    "name": "202 Laboratory",
+    "sensor": [
+      "S202"
+    ],
+    "light": "G87",
+    "air": [
+      35
+    ],
+    "power": "2L-3",
+    "ucode": "00001c00000000000002000000062d8d"
+  },
+  "a203": {
+    "floor": 2,
+    "name": "203 Research Center",
+    "sensor": [
+      "S203"
+    ],
+    "light": "G88",
+    "air": [
+      36,
+      37
+    ],
+    "power": "2L-4",
+    "ucode": "00001c00000000000002000000062d8b"
+  },
+  "a204": {
+    "floor": 2,
+    "name": "204 Laboratory",
+    "sensor": [
+      "S204"
+    ],
+    "light": "G89",
+    "air": [
+      38,
+      39
+    ],
+    "power": "2L-5",
+    "ucode": "00001c00000000000002000000062d89"
+  },
+  "a205": {
+    "floor": 2,
+    "name": "2F Elevator Hall",
+    "sensor": [
+      "S207"
+    ],
+    "light": "G85",
+    "air": [
+      40,
+      41
+    ],
+    "power": null,
+    "ucode": "00001c00000000000002000000062d88"
+  },
+  "a101": {
+    "floor": 1,
+    "name": "101 Teachers' Room",
+    "sensor": [
+      "S101"
+    ],
+    "light": "G77",
+    "air": [
+      23
+    ],
+    "power": "1L-2",
+    "ucode": "00001c00000000000002000000062d86"
+  },
+  "a102": {
+    "floor": 1,
+    "name": "102 Laboratory",
+    "sensor": [
+      "S102"
+    ],
+    "light": "G78",
+    "air": [
+      24,
+      25
+    ],
+    "power": "1L-3",
+    "ucode": "00001c00000000000002000000062d85"
+  },
+  "a103": {
+    "floor": 1,
+    "name": "103 Teachers' Room",
+    "sensor": [
+      "S103"
+    ],
+    "light": "G79",
+    "air": [
+      27
+    ],
+    "power": "1L-4",
+    "ucode": "00001c00000000000002000000062d84"
+  },
+  "a104": {
+    "floor": 1,
+    "name": "104 Laboratory",
+    "sensor": [
+      "S104"
+    ],
+    "light": "G80",
+    "air": [
+      28,
+      29
+    ],
+    "power": "1L-5",
+    "ucode": "00001c00000000000002000000062d83"
+  },
+  "a105": {
+    "floor": 1,
+    "name": "105 Lecture Room",
+    "sensor": [
+      "S105"
+    ],
+    "light": "G81",
+    "air": [
+      30,
+      31
+    ],
+    "power": "1L-6",
+    "ucode": "00001c00000000000002000000062d81"
+  },
+  "a106": {
+    "floor": 1,
+    "name": "1F Elevator Hall",
+    "sensor": [
+      "S106"
+    ],
+    "light": "G76",
+    "air": [
+      32,
+      33
+    ],
+    "power": null,
+    "ucode": "00001c00000000000002000000062d80"
+  },
+  "b102": {
+    "floor": -1,
+    "name": "B102 Office",
+    "sensor": [
+      "S902"
+    ],
+    "light": "G69",
+    "air": [
+      13,
+      14
+    ],
+    "power": "B1L-3",
+    "ucode": "00001c00000000000002000000062d7e"
+  },
+  "b103": {
+    "floor": -1,
+    "name": "B103 Conference Room",
+    "sensor": [
+      "S903"
+    ],
+    "light": "G70",
+    "air": [
+      15,
+      16
+    ],
+    "power": "B1L-4",
+    "ucode": "00001c00000000000002000000062d7d"
+  },
+  "b104": {
+    "floor": -1,
+    "name": "B104 Gallery",
+    "sensor": [
+      "S904"
+    ],
+    "light": "G71",
+    "air": [
+      17,
+      18
+    ],
+    "power": "B1L-5",
+    "ucode": "00001c00000000000002000000062d7b"
+  },
+  "b106": {
+    "floor": -1,
+    "name": "Gallery",
+    "sensor": [
+      "S910"
+    ],
+    "light": "G73",
+    "air": [
+      21,
+      22
+    ],
+    "power": "B1L-6",
+    "ucode": "00001c00000000000002000000062d78"
+  },
+  "b107": {
+    "floor": -1,
+    "name": "B1F Elevator Hall",
+    "sensor": [
+      "S907"
+    ],
+    "light": "G68",
+    "air": [
+      19
+    ],
+    "power": null,
+    "ucode": "00001c00000000000002000000062d7a"
+  },
+  "b202": {
+    "floor": -2,
+    "name": "B202 Laboratory",
+    "sensor": [
+      "S802"
+    ],
+    "light": "G62",
+    "air": [
+      4,
+      5
+    ],
+    "power": "B2L-2",
+    "ucode": "00001c00000000000002000000062d75"
+  },
+  "b203": {
+    "floor": -2,
+    "name": "B203 Laboratory",
+    "sensor": [
+      "S803"
+    ],
+    "light": "G63",
+    "air": [
+      6,
+      7
+    ],
+    "power": "B2L-3",
+    "ucode": "00001c00000000000002000000062d73"
+  },
+  "b204": {
+    "floor": -2,
+    "name": "B204 Laboratory",
+    "sensor": [
+      "S804"
+    ],
+    "light": "G64",
+    "air": [
+      8
+    ],
+    "power": "B2L-4",
+    "ucode": "00001c00000000000002000000062d71"
+  },
+  "b205": {
+    "floor": -2,
+    "name": "Gallery",
+    "sensor": [
+      "S808"
+    ],
+    "light": "G67",
+    "air": [
+      3,
+      9
+    ],
+    "power": "B1L-7",
+    "ucode": "00001c00000000000002000000062d6f"
+  },
+  "b206": {
+    "floor": -2,
+    "name": "B2F Elevator Hall",
+    "sensor": [
+      "S807"
+    ],
+    "light": "G61",
+    "air": [
+      10,
+      11
+    ],
+    "power": null,
+    "ucode": "00001c00000000000002000000062d70"
+  }
+}

@@ -1,0 +1,97 @@
+{% extends 'base_floor.html' %}
+
+{% block headerjs %}
+    <script type=text/javascript>
+
+        $(function () {
+            var floor = "{{ floor | safe }}"
+            console.log("current floor"+floor);
+            $('a#ele_up').bind('click', function () {
+                callElevator(floor, "up")
+                $('#map-elevator-up').attr('src', './static/images/map-elevator-up-1.png');
+            });
+
+            $('a#ele_down').bind('click', function () {
+                callElevator(floor, "down")
+                $('#map-elevator-down').attr('src', './static/images/map-elevator-down-1.png');
+            });
+
+
+            setInterval("getElevator()",5000)
+
+            var room_paras= {{ room_paras |tojson}}
+            getFloorContext(room_paras)
+
+        });
+
+    </script>
+{% endblock %}
+
+
+
+{% block sidebar %}
+    {% for f in floors %}
+        <a href={{ url_for('floor',floor=f) }}>
+            {% if f == floor %}
+                <img src="./static/images/{{ f }}f-1.png" id="floor-{{ f }}f"/>
+            {% else %}
+                <img src="./static/images/{{ f }}f-0.png" id="floor-{{ f }}f"/>
+            {% endif %}
+        </a>
+    {% endfor %}
+{% endblock %}
+
+
+{% block map %}
+    <img id="img-map" src="./static/images/map-{{ floor }}f-ja.png" usemap="#Map" style="position: relative;"/>
+    <map name="Map">
+        {% for i in range(0, rooms|length) %}
+            <area shape="rect" coords={{ room_area[i] }} href={{ url_for('room', room=rooms[i]) }}>
+        {% endfor %}
+
+    </map>
+{% endblock %}
+
+
+{% block room_map %}
+    {% for r in rooms %}
+        <a href={{ url_for('room', room=r) }}>
+            <img id="light-{{ r }}" src="./static/images/map-light-off.png" class="map-icon map-{{ floor }}-{{ r }}"/>
+        </a>
+    {% endfor %}
+{% endblock %}
+
+
+{% block table_content %}
+    <table class="map-data">
+        {% for i in range(0, rooms|length) %}
+            <tr id={{ rooms[i] }}>
+                <td>{{ rooms[i]|reverse }}</td>
+                <td><img src="./static/images/map-temperature.png"/></td>
+                <td class="temperature"></td>
+                <td><img src="./static/images/map-humidity.png"/></td>
+                <td class="humidity"></td>
+                <td><img src="./static/images/map-watt.png"/></td>
+                <td class="power"></td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
+
+{% block elevator %}
+    <p id="ele_place" class="text-color-1 ele_place"></p>
+    <a href=# id="ele_up">
+        {% if floor =="3" %}
+            <img id="map-elevator-up" src="./static/images/map-elevator-up-2.png"/>
+        {% else %}
+            <img id="map-elevator-up" src="./static/images/map-elevator-up-0.png"/>
+        {% endif %}
+    </a>
+    <a href=# id="ele_down">
+        {% if floor =="b2" %}
+            <img id="map-elevator-down" src="./static/images/map-elevator-down-2.png"/>
+        {% else %}
+            <img id="map-elevator-down" src="./static/images/map-elevator-down-0.png"/>
+        {% endif %}
+    </a>
+{% endblock %}

@@ -1,0 +1,144 @@
+{% extends 'base_room.html' %}
+
+{% block headerjs %}
+    <script type=text/javascript>
+        $(function () {
+            var room_para = {{ para |tojson}}
+            var room_name="{{ room | safe }}"
+
+            var light_ucode=room_para[room_name]["light"]
+            var air_id=room_para[room_name]["air"]
+
+            roomContext=getRoomContext(room_para, room_name)
+
+            air_conditioner=roomContext.air_conditioner_status
+
+            if(room_name=="a304" || room_name=="a305"){
+
+            $('a#light_control_on').bind('click', function () {
+                light_control(light_ucode, "on")
+            });
+            $('a#light_control_off').bind('click', function () {
+                light_control(light_ucode, "off")
+            });
+
+            $('a#air_control_on').bind('click', function () {
+                value = 1;
+
+                $('img#room-air-on').attr('src', '../static/images/room-air-on-1.png');
+                $('img#room-air-off').attr('src', '../static/images/room-air-off-0.png');
+                air_control_on_off(air_id, value)
+
+            });
+            $('a#air_control_off').bind('click', function () {
+                value =  0;
+                img=$('a#air_control_off').html()
+                $('img#room-air-off').attr('src', '../static/images/room-air-off-1.png');
+                $('img#room-air-on').attr('src', '../static/images/room-air-on-0.png');
+                air_control_on_off(air_id, value)
+
+            });
+
+              $('a#air_mode_cool').bind('click', function () {
+                air_conditioner.operation_mode = 0x04;
+            });
+
+            $('a#air_mode_heat').bind('click', function () {
+                air_conditioner.operation_mode = 0x02;
+            });
+
+             $('a#air_mode_dry').bind('click', function () {
+                air_conditioner.operation_mode = 0x40;
+            });
+
+            $('a#air_Temp_up').bind('click', function () {
+                temp=1
+                air_control_temp(air_id, temp)
+            });
+             $('a#air_Temp_down').bind('click', function () {
+                 temp =-1
+                 air_control_temp(air_id, temp)
+            });
+              $('a#air_Fan_up').bind('click', function () {
+                 fan =1
+                 air_control_fan(air_id, fan)
+            });
+              $('a#air_Fan_down').bind('click', function () {
+                 fan =-1
+                 air_control_fan(air_id, fan)
+            });
+            }
+
+        })
+
+    </script>
+{% endblock %}
+
+{% block sidebar %}
+    {% for f in floors %}
+        <a href={{ url_for('floor',floor=f) }}>
+            <img src="{{ url_for('.static', filename="images/"+f+"f-0.png") }}" id="floor-{{ f }}f"/>
+        </a>
+    {% endfor %}
+{% endblock %}
+
+{% block room_content %}
+    <p id="name" class="text-color-2 room-name">{{ room|reverse }}</p>
+    <p id="text-guest" class="text-color-2 room-account">ゲスト</p>
+    <p id="temperature" class="text-color-1 room-temperature"></p>
+    <p id="humidity" class="text-color-1 room-humidity"></p>
+    <p id="power" class="text-color-1 room-watt"></p>
+    <p id="set_temp" class="text-color-1 room-air-temperature"></p>
+    <p id="fan_speed" class="text-color-1 room-air-wind"></p>
+{% endblock %}
+
+
+{% block device_control %}
+    <a href=# id="light_control_on">
+        <img src="{{ url_for('.static', filename="images/room-light-on-0.png") }}" id="room-light-on"/>
+    </a>
+    <a href=# id="light_control_off">
+        <img src="{{ url_for('.static', filename="images/room-light-off-0.png") }}" id="room-light-off"/>
+    </a>
+
+    <a href=# id="air_control_on">
+        <img src="{{ url_for('.static', filename="images/room-air-on-0.png") }}" id="room-air-on"/>
+    </a>
+    <a href=# id="air_control_off">
+        <img src="{{ url_for('.static', filename="images/room-air-off-0.png") }}" id="room-air-off"/>
+    </a>
+
+    <a href=# id="air_mode_cool">
+        <img src="{{ url_for('.static', filename="images/room-air-select-0.png") }}" id="room-air-select-cool"/>
+    </a>
+
+    <a href=# id="air_mode_heat">
+        <img src="{{ url_for('.static', filename="images/room-air-select-0.png") }}" id="room-air-select-heat"/>
+    </a>
+
+     <a href=# id="air_mode_dry">
+        <img src="{{ url_for('.static', filename="images/room-air-select-0.png") }}" id="room-air-select-dry"/>
+    </a>
+
+    <a href=# id="air_Temp_up">
+        <img src="{{ url_for('.static', filename="images/room-air-button-up.png") }}"
+             class="room-air-temperature-button-up"/>
+    </a>
+
+     <a href=# id="air_Temp_down">
+        <img src="{{ url_for('.static', filename="images/room-air-button-down.png") }}"
+             class="room-air-temperature-button-down"/>
+    </a>
+
+    <a href=# id="air_Fan_up">
+        <img src="{{ url_for('.static', filename="images/room-air-button-up.png") }}"
+             class="room-air-wind-button-up"/>
+    </a>
+
+     <a href=# id="air_Fan_down">
+        <img src="{{ url_for('.static', filename="images/room-air-button-down.png") }}"
+             class="room-air-wind-button-down"/>
+    </a>
+{% endblock %}
+
+

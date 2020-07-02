@@ -1,0 +1,368 @@
+html {
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+body {
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	margin: 0;
+	padding: 0;
+	width: 1024px;
+	/*height: 768px;*/
+	height: 700px;
+	overflow: hidden;
+	background-color: #000;
+}
+
+
+.title {
+	position: absolute;
+	top: 120px;
+	left: 240px;
+	text-align: center;
+	color: #0cd6ae;
+	font-size: 24px;
+}
+
+p {
+	line-height: 0;
+	margin: 0;
+	padding: 0;
+	line-height: 0;
+	font-size: 34px;
+}
+
+.text-color-1 {
+	color: #0cd6ae;
+}
+.text-color-2 {
+	color: #000;
+}
+
+#floor-1f {
+	position: absolute;
+	top: 352px;
+	left: 3px;
+	padding: 20px 0;
+}
+#floor-2f {
+	position: absolute;
+	top: 280px;
+	left: 3px;
+	padding: 20px 0;
+}
+#floor-3f {
+	position: absolute;
+	top: 208px;
+	left: 3px;
+	padding: 20px 0;
+}
+#floor-b1f {
+	position: absolute;
+	top: 424px;
+	left: 3px;
+	padding: 20px 0;
+}
+
+#floor-b2f {
+	position: absolute;
+	top: 496px;
+	left: 3px;
+	padding: 20px 0;
+}
+
+.ele_place {
+	position: absolute;
+	top: 560px;
+	left: 766px;
+	text-align: center;
+	font-size: 24px;
+}
+
+.room-name {
+	position: absolute;
+	top: 46px;
+	left: 180px;
+}
+.room-account {
+	position: absolute;
+	top: 46px;
+	left: 784px;
+	text-align: center;
+}
+
+.room-temperature {
+	position: absolute;
+	top: 298px;
+	left: 880px;
+	text-align: left;
+}
+.room-humidity {
+	position: absolute;
+	top: 385px;
+	left: 880px;
+	text-align: left;
+}
+.room-watt {
+	position: absolute;
+	top: 472px;
+	left: 880px;
+	text-align: left;
+}
+
+#room-air-on {
+	position: absolute;
+	top: 428px;
+	left: 342px;
+}
+#room-air-off {
+	position: absolute;
+	top: 428px;
+	left: 526px;
+}
+#room-air-select-cool {
+	position: absolute;
+	top: 564px;
+	left: 191px;
+	padding: 10px 100px 10px 10px;
+}
+#room-air-select-heat {
+	position: absolute;
+	top: 618px;
+	left: 191px;
+	padding: 10px 100px 10px 10px;
+}
+#room-air-select-dry {
+	position: absolute;
+	top: 672px;
+	left: 191px;
+	padding: 10px 100px 10px 10px;
+}
+
+.room-air-temperature {
+	position: absolute;
+	top: 642px;
+	left: 504px;
+	text-align: center;
+}
+.room-air-wind {
+	position: absolute;
+	top: 642px;
+	left: 632px;
+	text-align: center;
+}
+.room-air-temperature-button-up {
+	position: absolute;
+	top: 556px;
+	left: 510px;
+}
+.room-air-temperature-button-down {
+	position: absolute;
+	top: 672px;
+	left: 510px;
+}
+.room-air-wind-button-up {
+	position: absolute;
+	top: 556px;
+	left: 635px;
+}
+.room-air-wind-button-down {
+	position: absolute;
+	top: 672px;
+	left: 635px;
+}
+#room-light-on {
+	position: absolute;
+	top: 160px;
+	left: 342px;
+}
+#room-light-off {
+	position: absolute;
+	top: 160px;
+	left: 526px;
+}
+
+.map-data {
+	position: absolute;
+	top: 490px;
+	left: 190px;
+	border-collapse: collapse;
+	border: none;
+	color: #fff;
+	font-size: 20px;
+}/*
+.map-data tr:nth-child(even) {
+	border-bottom: 2px solid #0CD6AE;
+	box-shadow: #0CD6AE 0px 0px 4px 2px;
+}*/
+.map-data tr td {
+	height: 38px;
+	border-bottom: 2px solid #0CD6AE;
+}
+.map-data tr td:nth-child(odd) {
+	padding: 0px 10px;
+	text-align: right;
+}
+.map-data tr td:nth-child(even) {
+	padding-left: 10px;
+}
+.map-data tr td:first-child {
+	padding: 0px 20px 0px 10px;
+	text-align: left;
+	width: 65px;
+}
+.map-data tr td img {
+	height: 24px;
+	vertical-align: top;
+	margin-top: 3px;
+}
+
+#map-elevator-up {
+	position: absolute;
+	top: 507px;
+	left: 819px;
+}
+#map-elevator-down {
+	position: absolute;
+	top: 625px;
+	left: 819px;
+}
+
+/* map照明アイコン */
+.map-icon {
+	height: 30px;
+}
+.map-3-a301 {
+	position: absolute;
+	top: 330px;
+	left: 222px;
+}
+.map-3-a302 {
+	position: absolute;
+	top: 330px;
+	left: 299px;
+}
+.map-3-a303 {
+	position: absolute;
+	top: 330px;
+	left: 375px;
+}
+.map-3-a304 {
+	position: absolute;
+	top: 330px;
+	left: 450px;
+}
+.map-3-a305 {
+	position: absolute;
+	top: 330px;
+	left: 554px;
+}
+.map-3-a306 {
+	position: absolute;
+	top: 330px;
+	left: 875px;
+}
+.map-2-a201 {
+	position: absolute;
+	top: 330px;
+	left: 222px;
+}
+.map-2-a202 {
+	position: absolute;
+	top: 330px;
+	left: 273px;
+}
+.map-2-a203 {
+	position: absolute;
+	top: 330px;
+	left: 370px;
+}
+.map-2-a204 {
+	position: absolute;
+	top: 330px;
+	left: 525px;
+}
+.map-1-a101 {
+	position: absolute;
+	top: 330px;
+	left: 222px;
+}
+.map-1-a102 {
+	position: absolute;
+	top: 330px;
+	left: 299px;
+}
+.map-1-a103 {
+	position: absolute;
+	top: 330px;
+	left: 375px;
+}
+.map-1-a104 {
+	position: absolute;
+	top: 330px;
+	left: 450px;
+}
+.map-1-a105 {
+	position: absolute;
+	top: 330px;
+	left: 554px;
+}
+.map-1-a106 {
+	position: absolute;
+	top: 365px;
+	left: 930px;
+}
+.map-b1-b102 {
+	position: absolute;
+	top: 343px;
+	left: 315px;
+}
+.map-b1-b103 {
+	position: absolute;
+	top: 343px;
+	left: 406px;
+}
+.map-b1-b104 {
+	position: absolute;
+	top: 343px;
+	left: 530px;
+}
+.map-b1-b105 {
+	position: absolute;
+	top: 343px;
+	left: 793px;
+}
+.map-b1-b106 {
+	position: absolute;
+	top: 343px;
+	left: 910px;
+}
+.map-b2-b202 {
+	position: absolute;
+	top: 343px;
+	left: 352px;
+}
+.map-b2-b203 {
+	position: absolute;
+	top: 343px;
+	left: 456px;
+}
+.map-b2-b204 {
+	position: absolute;
+	top: 343px;
+	left: 558px;
+}
+.map-b2-b207 {
+	position: absolute;
+	top: 343px;
+	left: 910px;
+}
+
+.footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
